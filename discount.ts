@@ -67,13 +67,13 @@ function categorizeCampaigns(campaigns: DiscountCampaign[]) {
                 coupon = c
                 break;
             case "On Top":
-                if (coupon) {
+                if (onTop) {
                     throw Error("Can only use one On-top discount")
                 }
                 onTop = c
                 break;
             case "Seasonal":
-                if (coupon) {
+                if (seasonal) {
                     throw Error("Can only use one Seasonal discount")
                 }
                 seasonal = c

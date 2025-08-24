@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "name": "T-Shirt",
+            "price": 350,
+            "category": "Clothing",
+            "quantity": 1
+        },
+        {
+            "name": "Watch",
+            "price": 850,
+            "category": "Accessories"
+        },
+        {
+            "name": "Pants",
+            "price": 490,
+            "category": "Clothing",
+            "quantity": 2
+        },
+        {
+            "name": "Phone",
+            "price": 9990,
+            "category": "Electronics",
+            "quantity": 1
+        }
+    ],
+    "discounts": [
+        {
+            "category": "Coupon",
+            "type": "Fixed",
+            "amount": 120
+        },
+        {
+            "category": "On Top",
+            "type": "Percentage",
+            "targetCategory": "Clothing",
+            "percentage": 15
+        },
+        {
+            "category": "Seasonal",
+            "type": "Special",
+            "everyXThb": 1000,
+            "discountYThb": 50
+        }
+    ]
+}

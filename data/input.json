@@ -7,8 +7,8 @@
             "quantity": 1
         },
         {
-            "name": "Hat",
-            "price": 250,
+            "name": "Watch",
+            "price": 850,
             "category": "Accessories"
         }
     ],
@@ -16,7 +16,13 @@
         {
             "category": "Coupon",
             "type": "Fixed",
-            "amount": 50
+            "amount": 100
+        },
+        {
+            "category": "On Top",
+            "type": "Percentage",
+            "targetCategory": "Clothing",
+            "percentage": 15
         }
     ]
 }

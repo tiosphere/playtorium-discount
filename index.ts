@@ -102,43 +102,55 @@ function showHelp(): void {
 ╚════════════════════════════════════════════════════════════════════════════════╝
 
 USAGE:
-  bun run index.ts <input-file.json>
+  bun run index.ts <input.json>
   bun run index.ts --help
 
 ARGUMENTS:
-  input-file.json    Path to JSON file containing cart items and discount campaigns
+  input.json    Path to JSON file containing cart items and discount campaigns
 
 OPTIONS:
   --help, -h        Show this help message
 
 EXAMPLE JSON FORMAT:
 {
-  "items": [
-    {
-      "name": "T-Shirt",
-      "price": 350,
-      "category": "Clothing",
-      "quantity": 2
-    },
-    {
-      "name": "Watch",
-      "price": 850,
-      "category": "Accessories"
-    }
-  ],
-  "discounts": [
-    {
-      "category": "Coupon",
-      "type": "Fixed",
-      "amount": 100
-    },
-    {
-      "category": "On Top", 
-      "type": "Percentage",
-      "targetCategory": "Clothing",
-      "percentage": 15
-    }
-  ]
+    "items": [
+        {
+            "name": "G-Shirt",
+            "price": 350,
+            "category": "Clothing",
+            "quantity": 1
+        },
+        {
+            "name": "Watch",
+            "price": 850,
+            "category": "Accessories"
+        },
+        {
+            "name": "yPhone",
+            "price": 9990,
+            "category": "Electronics",
+            "quantity": 1
+        }
+    ],
+    "discounts": [
+        {
+            "category": "Coupon",
+            "type": "Fixed",
+            "amount": 100
+        },
+        {
+            "category": "On Top",
+            "type": "Percentage",
+            "targetCategory": "Clothing",
+            "percentage": 10
+        },
+        {
+            "category": "Seasonal",
+            "type": "Special",
+            "everyXThb": 1000,
+            "discountYThb": 50
+        }
+    ]
 }
 
 SUPPORTED CATEGORIES:
@@ -202,20 +214,6 @@ async function loadAndValidateCart(filepath: string): Promise<Cart> {
         }
         throw error
     }
-
-    // try {
-    //     const file = Bun.file(filepath)
-    //     const jsonData = await file.json()
-    //     return CartSchema.parse(jsonData)
-    // } catch (error) {
-    //     if (error.name === "SyntaxError") {
-    //         const cliError: CLIError = new Error(`Invalid JSON format in file: ${filepath}`)
-    //         cliError.code = "INVALID_JSON"
-    //         throw cliError
-    //     }
-
-    //     throw error
-    // }
 }
 
 function handleError(error: CLIError): void {

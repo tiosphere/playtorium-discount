@@ -18,7 +18,7 @@
             "quantity": 2
         },
         {
-            "name": "Phone",
+            "name": "yPhone",
             "price": 9990,
             "category": "Electronics",
             "quantity": 1
@@ -28,13 +28,13 @@
         {
             "category": "Coupon",
             "type": "Fixed",
-            "amount": 120
+            "amount": 100
         },
         {
             "category": "On Top",
             "type": "Percentage",
             "targetCategory": "Clothing",
-            "percentage": 15
+            "percentage": 10
         },
         {
             "category": "Seasonal",

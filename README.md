@@ -1,6 +1,5 @@
 # Discount Calculator
 
-**Developer:** Chiraphat Lua  
 **Project:** Playtorium Take-Home Assignment - Discount Module
 
 A TypeScript-based discount calculation system that applies multiple discount campaigns to shopping cart items according to specific business rules.
